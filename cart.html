@@ -10,18 +10,89 @@
 <body>
     <script>
         let quantity=0;
+        const minQuantity=1;
+       
         
         
  
      </script>
 
     <h2>Cart quantity</h2>
-    <button  onclick="console.log(quantity);">show Quantity</button>
-    <button  onclick="console.log(quantity+=1)">Add to cart</button>
-    <button  onclick="console.log(quantity+=2)">+2</button>
-    <button  onclick="console.log(quantity+=3)">+3</button>
-    <button  onclick="console.log(quantity*=0)">Reset cart</button>
-<h3 id="cart"> cart value </h3>
+                    <button  onclick="console.log(quantity);">show Quantity</button>
+                    <button  onclick="
+                    if(quantity+1>10){
+                        alert('cart is full');
+                    }
+                    else{
+                        quantity++;
+                        console.log(quantity);
+                    }"
+                    
+                    >Add to cart</button>
+                    <button  onclick=" if(quantity+2>10){
+                        alert('cart is full');
+                    
+                    }
+                    else{
+                        quantity+=2;
+                        console.log(quantity);
+
+                    }">+2</button>
+                    <button  onclick=" if(quantity+3>10){
+                        alert('cart is full');
+                    }
+                    else{
+                        quantity+=3;
+                        console.log(quantity);
+
+                    }">+3</button>
+                    <button  onclick="if(quantity-2<=0){
+                        alert('cart is empty');
+                    
+                    }
+                    else{
+                        quantity-=2;
+                        console.log(quantity);
+
+                    }
+                    ">-2</button>
+                    <button  onclick="
+                    if(quantity-3<=0){
+                        quantity*=0;
+
+                        alert('cart is empty');
+                    
+                    }
+                    else{
+                        quantity-=3;
+                        console.log(quantity);
+
+                    }">-3</button>
+                    <button  onclick="if(quantity-2<=0){
+                        quantity*=0;
+                        alert('cart is empty');
+                    
+                    }
+                    else{
+                        quantity-=2;
+                        console.log(quantity);
+
+                    }
+                    ">-2</button>
+                    <button  onclick="
+                    if(quantity-1<0){
+                        alert('cart is empty');
+                    
+                    }
+                    else{
+                        quantity--;
+                        console.log(quantity);
+
+                    }">remove from cart</button>
+                    
+                    <button  onclick="console.log(quantity*=0)">Reset cart</button>
+                
+    
     
 
     <style>
